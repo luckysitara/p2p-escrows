@@ -475,6 +475,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Tailwind CSS** - For the utility-first CSS framework
 - **Vercel** - For the excellent deployment platform
 
+
+##Note
+- note that i had issue deploying the escrow template on codigo so  i downloaded the templates and deploy it locally on my machine, so as to get the idl.json file and programid, so possibly you might need to edit them in the environment file(.env.local)
+
+
 ## 📞 Support
 
 Need help? We're here for you:
