@@ -75,7 +75,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/p2p-escrows.git
+   git clone https://github.com/luckysitara/p2p-escrows.git
    cd p2p-escrows
    ```
 
@@ -462,25 +462,6 @@ npm run dev -- --force
 - Never share your seed phrase or private keys
 - Verify smart contract addresses
 
-## 📈 Roadmap
-
-### Version 2.0 (Q2 2024)
-- [ ] Multi-token support (USDC, USDT)
-- [ ] Advanced dispute resolution system
-- [ ] Team collaboration features
-- [ ] Mobile app (React Native)
-
-### Version 2.1 (Q3 2024)
-- [ ] Integration with popular freelance platforms
-- [ ] Advanced analytics and reporting
-- [ ] Automated milestone triggers
-- [ ] Smart contract upgrades
-
-### Version 3.0 (Q4 2024)
-- [ ] Cross-chain support (Ethereum, Polygon)
-- [ ] DAO governance features
-- [ ] NFT-based reputation system
-- [ ] Advanced escrow templates
 
 ## 📄 License
 
@@ -498,10 +479,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Need help? We're here for you:
 
-- **Email:** support@p2p-escrows.com
-- **Discord:** [Join our community](https://discord.gg/p2p-escrows)
-- **Twitter:** [@P2PEscrows](https://twitter.com/P2PEscrows)
-- **GitHub:** [Create an issue](https://github.com/yourusername/p2p-escrows/issues)
+- **Email:** bughackerjanaan@gmail.com
+
+- **GitHub:** [Create an issue](https://github.com/luckysitara/p2p-escrows/issues)
 
 ---
 
