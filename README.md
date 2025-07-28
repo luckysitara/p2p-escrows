@@ -74,36 +74,36 @@ Before you begin, ensure you have the following installed:
 ### Installation
 
 1. **Clone the repository**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/yourusername/p2p-escrows.git
    cd p2p-escrows
-   \`\`\`
+   ```
 
 2. **Navigate to frontend directory**
-   \`\`\`bash
+   ```bash
    cd frontend
-   \`\`\`
+   ```
 
 3. **Install dependencies**
-   \`\`\`bash
+   ```bash
    npm install
    # or
    yarn install
-   \`\`\`
+   ```
 
 4. **Start the development server**
-   \`\`\`bash
+   ```bash
    npm run dev
    # or
    yarn dev
-   \`\`\`
+   ```
 
 5. **Open your browser**
    Navigate to `http://localhost:3000` to see the application running.
 
 ### Building for Production
 
-\`\`\`bash
+```bash
 # Build the application
 npm run build
 
@@ -116,11 +116,11 @@ npm run type-check
 # Linting
 npm run lint
 npm run lint:fix
-\`\`\`
+```
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 frontend/
 ├── src/
 │   ├── components/          # React components
@@ -148,7 +148,7 @@ frontend/
 ├── tailwind.config.js     # Tailwind CSS configuration
 ├── tsconfig.json          # TypeScript configuration
 └── README.md              # This file
-\`\`\`
+```
 
 ## 🎯 Usage Guide
 
@@ -212,7 +212,7 @@ frontend/
 
 Create a `.env.local` file in the frontend directory:
 
-\`\`\`env
+```env
 # Solana Network Configuration
 VITE_SOLANA_NETWORK=devnet
 VITE_SOLANA_RPC_URL=https://api.devnet.solana.com
@@ -222,7 +222,7 @@ VITE_PROGRAM_ID=6NKNtHYLCLmUpBqNDhhxycwUPZxjiZEimm9HddcALKRk
 
 # Optional: Custom RPC endpoints
 VITE_CUSTOM_RPC_URL=your-custom-rpc-url
-\`\`\`
+```
 
 ### Network Configuration
 
@@ -234,23 +234,23 @@ The application supports multiple Solana networks:
 
 To change networks, modify the `network` variable in `src/App.tsx`:
 
-\`\`\`typescript
+```typescript
 const network = WalletAdapterNetwork.Devnet // or Mainnet, Testnet
-\`\`\`
+```
 
 ### Program ID Configuration
 
 Update the program ID in `src/hooks/useEscrowProgram.ts`:
 
-\`\`\`typescript
+```typescript
 const PROGRAM_ID = new PublicKey("YOUR_PROGRAM_ID_HERE")
-\`\`\`
+```
 
 ## 🧪 Testing
 
 ### Running Tests
 
-\`\`\`bash
+```bash
 # Run all tests
 npm test
 
@@ -262,11 +262,11 @@ npm run test:coverage
 
 # Run specific test file
 npm test ProjectCard.test.tsx
-\`\`\`
+```
 
 ### Test Structure
 
-\`\`\`
+```
 src/
 ├── __tests__/              # Test files
 │   ├── components/         # Component tests
@@ -274,7 +274,7 @@ src/
 │   └── utils/             # Utility tests
 ├── __mocks__/             # Mock files
 └── setupTests.ts          # Test configuration
-\`\`\`
+```
 
 ## 🚀 Deployment
 
@@ -301,13 +301,13 @@ src/
 
 ### Manual Deployment
 
-\`\`\`bash
+```bash
 # Build the application
 npm run build
 
 # Upload the dist/ folder to your hosting provider
 # Configure your web server to serve the index.html file
-\`\`\`
+```
 
 ## 🔧 Development
 
@@ -315,7 +315,7 @@ npm run build
 
 The project uses ESLint and Prettier for code formatting:
 
-\`\`\`bash
+```bash
 # Lint code
 npm run lint
 
@@ -324,19 +324,19 @@ npm run lint:fix
 
 # Format code
 npm run format
-\`\`\`
+```
 
 ### Git Hooks
 
 Pre-commit hooks ensure code quality:
 
-\`\`\`bash
+```bash
 # Install husky for git hooks
 npm install --save-dev husky
 
 # Set up pre-commit hook
 npx husky add .husky/pre-commit "npm run lint && npm run type-check"
-\`\`\`
+```
 
 ### Contributing
 
@@ -352,7 +352,7 @@ npx husky add .husky/pre-commit "npm run lint && npm run type-check"
 
 The main hook for interacting with the Solana escrow program:
 
-\`\`\`typescript
+```typescript
 const {
   fundMilestone,      // Fund a milestone with escrow
   claimPayment,       // Claim payment from escrow
@@ -362,63 +362,63 @@ const {
   isConnected,        // Wallet connection status
   programId           // Program ID string
 } = useEscrowProgram()
-\`\`\`
+```
 
 ### Key Functions
 
 #### fundMilestone
-\`\`\`typescript
+```typescript
 await fundMilestone(
   freelancerAddress: string,
   amount: number,
   seed: number
 ): Promise<string>
-\`\`\`
+```
 
 #### claimPayment
-\`\`\`typescript
+```typescript
 await claimPayment(
   escrowAddress: string,
   clientAddress: string
 ): Promise<void>
-\`\`\`
+```
 
 #### refundMilestone
-\`\`\`typescript
+```typescript
 await refundMilestone(
   escrowAddress: string
 ): Promise<void>
-\`\`\`
+```
 
 ## 🐛 Troubleshooting
 
 ### Common Issues
 
 #### Wallet Connection Issues
-\`\`\`bash
+```bash
 # Clear browser cache and cookies
 # Disable browser extensions temporarily
 # Try a different wallet
 # Check network connectivity
-\`\`\`
+```
 
 #### Transaction Failures
-\`\`\`bash
+```bash
 # Ensure sufficient SOL balance for gas fees
 # Check if wallet is connected to correct network
 # Verify program ID is correct
 # Try increasing transaction timeout
-\`\`\`
+```
 
 #### Build Issues
-\`\`\`bash
+```bash
 # Clear node modules and reinstall
 rm -rf node_modules package-lock.json
 npm install
 
 # Clear Vite cache
 npm run dev -- --force
-\`\`\`
+```
 
 ### Getting Help
 
